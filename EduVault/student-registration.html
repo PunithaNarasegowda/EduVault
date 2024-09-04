@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e9ecef; /* Light gray background for a formal look */
+        }
+        .registration-container {
+            background-color: #ffffff; /* White background for the form */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            border: 2px solid #007bff; /* Blue border for emphasis */
+            border-top: 6px solid #0056b3; /* Darker blue border on top for added emphasis */
+        }
+        .registration-container h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #0056b3; /* Dark blue heading */
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .registration-container label {
+            display: block;
+            margin: 12px 0 5px;
+            color: #495057; /* Darker gray label text for a formal touch */
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .registration-container input, 
+        .registration-container select,
+        .registration-container button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da; /* Light gray border for inputs */
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
+        }
+        .registration-container select {
+            background-color: #f8f9fa; /* Slightly lighter background for select */
+        }
+        .registration-container button {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .registration-container button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+        }
+        .registration-container input:focus,
+        .registration-container select:focus {
+            border-color: #007bff; /* Focus border color */
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+        }
+        .captcha-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .captcha-container img {
+            margin-right: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Student Registration</h2>
+        <form>
+            <label for="loginMode">Select Login Mode:</label>
+            <select id="loginMode" name="loginMode">
+                <option value="" disabled selected>Select login mode</option>
+                <option value="email">Email ID</option>
+                <option value="mobile">Mobile Number</option>
+                <option value="otr">OTR ID</option>
+            </select>
+
+            <label for="identifier">Email ID / Mobile Number / OTR ID:</label>
+            <input type="text" id="identifier" name="identifier" placeholder="Enter your email ID or mobile number or OTR ID">
+
+            <button type="button" onclick="getOTP()">Get OTP</button>
+
+            <label for="otp">Enter OTP / Password:</label>
+            <input type="text" id="otp" name="otp" placeholder="Enter OTP or password">
+
+            <div class="captcha-container">
+                <img src="captcha-image.jpg" alt="Captcha" width="100" height="40">
+                <input type="text" id="captcha" name="captcha" placeholder="Enter verification code">
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function getOTP() {
+            // Placeholder function for getting OTP
+            alert('OTP has been sent to your email/mobile.');
+        }
+    </script>
+</body>
+</html>
