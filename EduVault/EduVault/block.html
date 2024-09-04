@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+   
+   <style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 1000px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .main-content {
+        flex: 1;
+    }
+    
+    /* First Div Style */
+    .first-div {
+        background: linear-gradient(to bottom, white, lightblue);
+        border-top: 20px solid orange;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        padding-left: 6px;
+        position: relative;
+    }
+    
+    /* Image Styling for Right Corner */
+    .right-corner-img {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        height: calc(100% - 6px);
+        margin: 3px;
+    }
+    
+    /* Image Styling for Left Corner */
+    .left-corner-img {
+        height: 80px; /* Set height for compactness */
+        margin-right: 6px;
+        object-fit: contain; /* Ensure aspect ratio is preserved */
+    }
+    
+    /* Exam Names Styling */
+    .exam-names {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    .exam-names h1 {
+        margin: 0;
+    }
+    
+    .exam-names h2 {
+        margin: 5px 0 0;
+    }
+    
+    /* Third Div Style */
+    .third-div {
+        background-color: green;
+        display: flex;
+        justify-content: left;
+        padding: 10px 0;
+    }
+    
+    .third-div a {
+        color: white;
+        text-decoration: none;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    .third-div a::before {
+        content: '• ';
+        margin-right: 5px;
+    }
+    
+    .third-div a+a {
+        border-left: 1px solid white;
+    }
+    
+    /* Scrolling Text Div */
+    .scrolling-text-container {
+        overflow: hidden;
+        background-color: lightgray;
+        color: black;
+        padding: 10px;
+        font-size: 18px;
+        position: relative;
+        white-space: nowrap;
+    }
+    
+    .scrolling-text {
+        display: inline-block;
+        padding-left: 0; /* Start position */
+        animation: scroll-left 1s linear infinite;
+    }
+    
+    @keyframes scroll-left {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    
+    /* Footer Style */
+    footer {
+        background-color: black;
+        color: white;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+        position:relative;
+    }
+    
+    .footer-heading {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-heading::before {
+        content: '🔧 '; /* Help symbol */
+        margin-right: 10px;
+    }
+    
+    .footer-links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+    }
+    
+    .footer-links li {
+        margin: 5px 0;
+    }
+    
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+    }
+   </style> 
+
+
+<body>
+    <div class="main-content">
+        <div class="first-div">
+            <!-- Left Image -->
+            <img src="image2.png" class="left-corner-img" alt="Logo Image">
+
+            <!-- Title and Content Here -->
+            <div class="exam-names">
+                <h1>Examination Name</h1>
+                <h2>परीक्षा का नाम </h2>
+            </div>
+
+            <!-- Right Image -->
+            <img src="image.png" class="right-corner-img" alt="Azadi Ka Amrit Mahotsav">
+        </div>
+
+        <div class="third-div">
+            <a href="#">Home</a>
+            <a href="#">Information</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Forgot Password</a>
+        </div>
+
+        <div class="scrolling-text-container">
+            <div class="scrolling-text">
+              All the important announcements to be done here!</div>
+        </div>
+    </div>
+
+    
+
+    <div class="main">
+        <div class="registration-container">
+            <h2>Student Registration</h2>
+            <form>
+                <label for="loginMode">Select Login Mode:</label>
+                <select id="loginMode" name="loginMode">
+                    <option value="" disabled selected>Select login mode</option>
+                    <option value="email">Email ID</option>
+                    <option value="mobile">Mobile Number</option>
+                    <option value="otr">OTR ID</option>
+                </select>
+
+                <label for="identifier">Email ID / Mobile Number / OTR ID:</label>
+                <input type="text" id="identifier" name="identifier" placeholder="Enter your email ID or mobile number or OTR ID">
+
+                <button type="button" onclick="getOTP()">Get OTP</button>
+
+                <label for="otp">Enter OTP / Password:</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter OTP or password">
+
+                <div class="captcha-container">
+                    <img src="captcha-image.jpg" alt="Captcha" width="100" height="40">
+                    <input type="text" id="captcha" name="captcha" placeholder="Enter verification code">
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <div class="title-container">
+                <h2 class="title">How to apply for Online Application?</h2>
+            </div>
+            <div class="content">
+                <ul class="instructions-list">
+                    <li>Candidate has to register himself/herself on the OTR (One Time Registration) portal by clicking the
+                        New Registration button.</li>
+                    <li>After registration, he/she has to login (by Email ID/Mobile Number/OTR ID) to verify the already
+                        registered OTR - application.</li>
+                    <li>Go to the Latest Notification tab in the OTR application.</li>
+                    <li>Apply for the desirable Examination.</li>
+                    <li>Candidate can check active examination notifications (in English and Hindi) on URL: <a
+                            href="" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getOTP() {
+            // Placeholder function for getting OTP
+            alert('OTP has been sent to your email/mobile.');
+        }
+    </script>
+    <footer>
+        <div class="footer-heading">Helpdesk</div>
+        <ul class="footer-links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Important Links</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

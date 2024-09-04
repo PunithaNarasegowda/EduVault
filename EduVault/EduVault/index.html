@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e9ecef; /* Light gray background for a formal look */
+        }
+        .login-container {
+            background-color: #ffffff; /* White background for the form */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 360px;
+            border: 2px solid #007bff; /* Blue border for emphasis */
+            border-top: 6px solid #0056b3; /* Darker blue border on top for added emphasis */
+        }
+        .login-container h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #0056b3; /* Dark blue heading */
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .login-container label {
+            display: block;
+            margin: 12px 0 5px;
+            color: #495057; /* Darker gray label text for a formal touch */
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .login-container input, 
+        .login-container select,
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da; /* Light gray border for inputs */
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box; /* Ensures padding doesn't affect the width */
+        }
+        .login-container select {
+            background-color: #f8f9fa; /* Slightly lighter background for select */
+        }
+        .login-container button {
+            background-color: #007bff; /* Blue button */
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .login-container button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+        }
+        .login-container input:focus,
+        .login-container select:focus {
+            border-color: #007bff; /* Focus border color */
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form onsubmit="return handleLogin(event)">
+            <!-- User Type Selection -->
+            <label for="userType">User Type:</label>
+            <select id="userType" name="userType">
+                <option value="" disabled selected>Select user type</option>
+                <option value="admin">Admin</option>
+                <option value="paper-setter">Examiner</option>
+                <option value="student">Student</option>
+            </select>
+
+            <!-- Username Field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <!-- Password Field -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            const userType = document.getElementById('userType').value;
+            if (userType === 'student') {
+                // Redirect to student registration page
+                window.location.href = 'student-registration.html';
+            } else if(userType === 'paper-setter') {
+                window.location.href = 'examiner-registration.html';
+                // Normally handle other user types
+                }
+              else{
+                  alert('Login submitted');
+            }
+        }
+    </script>
+</body>
+</html>

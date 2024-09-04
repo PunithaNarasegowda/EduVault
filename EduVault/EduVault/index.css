@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    /* Remove padding from the container */
+    background-color: #e0e0e0;
+    /* Aesthetic grey background */
+    border-radius: 8px;
+    border: solid;
+    border-color: #b9b7b7;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #28a745;
+    /* Green left border */
+}
+
+.title-container {
+    background-color: #f0f0f0;
+    /* Lighter grey background for the title */
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    /* Line between title and content */
+    border-radius: 8px 8px 0 0;
+    /* Rounded top corners */
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 24px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: #169033;
+    /* Green color for the title */
+}
+
+.content {
+    padding: 20px;
+}
+
+.benefits-list {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.benefits-list li {
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    /* Dark grey color for text */
+}
+
+.right{
+display:flex;
+flex-direction: column;
+flex-basis: 100px;
+justify-content: center;
+gap:10px;
+
+}
+
+.main-content {
+flex: 1;
+/* Allows the main content area to expand and push the footer down */
+}
+
+/* First Div Style */
+.first-div {
+background: linear-gradient(to bottom, white, lightblue);
+border-top: 20px solid orange;
+height: 130px;
+display: flex;
+align-items: center;
+padding-left: 6px;
+position: relative;
+}
+
+/* Image Styling for Right Corner */
+.right-corner-img {
+position: absolute;
+right: 3px;
+bottom: 3px;
+height: calc(100% - 6px);
+margin: 3px;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+height: 100vh;
+margin: 0;
+background-color: #a6c1dd; /* Light gray background for a formal look */
+}
+.registration-container {
+background-color: #ffffff; 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; 
+    max-width: 800px; 
+    border: 2px solid #007bff; 
+    border-top: 3px solid #0056b3; 
+    margin: 0 auto; 
+    position: relative;
+    top:20px;
+margin-bottom: 20px; }
+.registration-container h2 {
+margin-bottom: 25px;
+text-align: center;
+color: #0056b3; /* Dark blue heading */
+font-size: 28px;
+font-weight: 600;
+}
+.registration-container label {
+display: block;
+margin: 12px 0 5px;
+color: #495057; /* Darker gray label text for a formal touch */
+font-size: 14px;
+font-weight: 500;
+}
+.registration-container input, 
+.registration-container select,
+.registration-container button {
+width: 100%;
+padding: 12px;
+margin-bottom: 20px;
+border: 1px solid #ced4da; /* Light gray border for inputs */
+border-radius: 5px;
+font-size: 16px;
+box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+.main{
+display:flex;
+justify-content: center;
+gap: 10px;
+margin-bottom: 20px;
+top:0px;
+}
+.registration-container select {
+background-color: #f8f9fa; /* Slightly lighter background for select */
+}
+.registration-container button {
+background-color: #007bff; /* Blue button */
+color: white;
+border: none;
+font-size: 16px;
+cursor: pointer;
+font-weight: bold;
+transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.registration-container button:hover {
+background-color: #0056b3; /* Darker shade on hover */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+.registration-container input:focus,
+.registration-container select:focus {
+border-color: #007bff; /* Focus border color */
+outline: none;
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+}
+.captcha-container {
+display: flex;
+align-items: center;
+margin-bottom: 15px;
+}
+.captcha-container img {
+margin-right: 10px;
+border: 1px solid #ced4da;
+border-radius: 5px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+    }
+    
+    .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #e0e0e0;
+    border:solid;
+    border-radius: 2px;
+    border-color: #e3e3e3;
+    /* Aesthetic grey background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #4e7ec1;
+    /* Green left border */
+    }
+    
+    .title-container {
+    background-color: #f0f0f0;
+    /* Lighter grey background for the title */
+    padding: 15px;
+    border-bottom: 2px solid #ddd;
+    border-radius: 8px 8px 0 0;
+    font-family: 'Garamond', serif;
+    /* Formal serif font for title */
+    }
+    
+    .title {
+    font-size: 30px;
+    margin: 0;
+    color: #286aa7;
+    }
+    
+    .content {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    /* Formal sans-serif font for content */
+    }
+    
+    .instructions-list {
+    margin-top: 15px;
+    padding-left: 20px;
+    }
+    
+    .instructions-list li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    }
+    
+    .instructions-list a {
+    color: #007bff;
+    text-decoration: none;
+    
+    }
+    
+    .instructions-list a:hover {
+    text-decoration: underline;
+    } 
