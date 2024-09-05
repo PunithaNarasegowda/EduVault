@@ -84,7 +84,6 @@ padding-left: 6px;
 position: relative;
 }
 
-/* Image Styling for Right Corner */
 .right-corner-img {
 position: absolute;
 right: 3px;
@@ -97,7 +96,7 @@ body {
 font-family: 'Arial', sans-serif;
 height: 100vh;
 margin: 0;
-background-color: #a6c1dd; /* Light gray background for a formal look */
+background-color: #a6c1dd; 
 }
 .registration-container {
 background-color: #ffffff; 
@@ -115,14 +114,14 @@ margin-bottom: 20px; }
 .registration-container h2 {
 margin-bottom: 25px;
 text-align: center;
-color: #0056b3; /* Dark blue heading */
+color: #0056b3; 
 font-size: 28px;
 font-weight: 600;
 }
 .registration-container label {
 display: block;
 margin: 12px 0 5px;
-color: #495057; /* Darker gray label text for a formal touch */
+color: #495057; 
 font-size: 14px;
 font-weight: 500;
 }
@@ -132,11 +131,10 @@ font-weight: 500;
 width: 100%;
 padding: 12px;
 margin-bottom: 20px;
-border: 1px solid #ced4da; /* Light gray border for inputs */
+border: 1px solid #ced4da; 
 border-radius: 5px;
 font-size: 16px;
-box-sizing: border-box; /* Ensures padding doesn't affect the width */
-}
+box-sizing: border-box; }
 .main{
 display:flex;
 justify-content: center;
@@ -145,10 +143,10 @@ margin-bottom: 20px;
 top:0px;
 }
 .registration-container select {
-background-color: #f8f9fa; /* Slightly lighter background for select */
+background-color: #f8f9fa; 
 }
 .registration-container button {
-background-color: #007bff; /* Blue button */
+background-color: #007bff;
 color: white;
 border: none;
 font-size: 16px;
@@ -157,14 +155,13 @@ font-weight: bold;
 transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .registration-container button:hover {
-background-color: #0056b3; /* Darker shade on hover */
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
-}
+background-color: #0056b3; 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); }
 .registration-container input:focus,
 .registration-container select:focus {
-border-color: #007bff; /* Focus border color */
+border-color: #007bff; 
 outline: none;
-box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Blue shadow on focus */
+box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
 }
 .captcha-container {
 display: flex;
@@ -193,22 +190,18 @@ body {
     border:solid;
     border-radius: 2px;
     border-color: #e3e3e3;
-    /* Aesthetic grey background */
-    border-radius: 8px;
+     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #4e7ec1;
-    /* Green left border */
     }
     
     .title-container {
     background-color: #f0f0f0;
-    /* Lighter grey background for the title */
     padding: 15px;
     border-bottom: 2px solid #ddd;
     border-radius: 8px 8px 0 0;
     font-family: 'Garamond', serif;
-    /* Formal serif font for title */
-    }
+ }
     
     .title {
     font-size: 30px;
@@ -219,7 +212,6 @@ body {
     .content {
     padding: 20px;
     font-family: 'Roboto', sans-serif;
-    /* Formal sans-serif font for content */
     }
     
     .instructions-list {
@@ -242,4 +234,4 @@ body {
     
     .instructions-list a:hover {
     text-decoration: underline;
-    } 
+    }
