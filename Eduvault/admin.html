@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            padding: 0 20px;
+            border-top: 5px solid rgb(45, 110, 240);
+            border-left: 10px solid rgb(45, 110, 240);
+            border-right: 10px solid rgb(45, 110, 240);
+            border-bottom: 1px solid rgb(45, 110, 240);
+            background-color: #ffffff;
+        }
+
+        .section,
+        .send-requests,
+        .request-status {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding: 0 10px;
+        }
+
+        .section button,
+        .send-requests button,
+        .request-status button {
+            background: none;
+            border: none;
+            font-size: 21px;
+            color: #607d8b;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .examinar-name {
+            flex: 1;
+            font-size: 21px;
+            color: #607d8b;
+            border-right: 1px solid #b0bec5;
+        }
+
+        .send-requests {
+            flex: 2;
+            border-right: 1px solid #b0bec5;
+        }
+
+        .request-status {
+            flex: 2;
+            border-right: 1px solid #b0bec5;
+        }
+
+        .logout {
+            flex: 1;
+            text-align: right;
+        }
+
+        .logout::before {
+            content: '🔓';
+            margin-right: 8px;
+        }
+
+        /* Hover effects */
+        .section button:hover,
+        .send-requests button:hover,
+        .request-status button:hover {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        /* Updated selection-container styles */
+        .selection-container {
+            background-color: #efeeee50;
+            padding: 20px;
+            border: 2px solid #1a5ada;
+            border-radius: 5px;
+            width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .selection-container label {
+            font-size: 16px;
+            color: #2d6ef0;
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .selection-container select {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            color: #333;
+            border: 1px solid #607d8b;
+            border-radius: 4px;
+            background-color: #ffffff;
+        }
+
+        .selection-container button {
+            margin-top: 20px;
+            padding: 8px 12px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #1a5ada;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .selection-container button:hover {
+            background-color: #155ab2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section examinar-name">
+            Admin Name
+        </div>
+        <div class="send-requests">
+            <button onclick="showDetails()">Send Requests</button>
+        </div>
+        <div class="request-status">
+            <button onclick="showAccepted()">Requests-Status</button>
+        </div>
+        <div class="section logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- Selection Container for Course Details -->
+    <div class="selection-container" id="selectionContainer">
+        <label for="course">Select Course:</label>
+        <select id="course" name="course">
+            <option value="BE">BE</option>
+            <option value="BTech">BTech</option>
+            <option value="UPSC">UPSC</option>
+            <option value="SSC">SSC</option>
+            <option value="Other">Other Exam</option>
+        </select>
+
+        <label for="semester">Select Semester:</label>
+        <select id="semester" name="semester">
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+            <option value="V">V</option>
+            <option value="More">More</option>
+        </select>
+
+        <label for="branch">Select Branch:</label>
+        <select id="branch" name="branch">
+            <option value="IT">IT</option>
+            <option value="CSE">CSE</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="DataScience">Data Science</option>
+            <option value="AIML">AI/ML</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="subject">Select Subject:</label>
+        <select id="subject" name="subject">
+            <option value="CompilerDesign">Compiler Design</option>
+            <option value="History">History</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- Submit and Finalize Buttons -->
+        <button onclick="submitSelection()">Submit</button>
+        <button onclick="finalizeSelection()">Finalize</button>
+    </div>
+
+    <script>
+        // Function to show the selection container
+        function showDetails() {
+            document.getElementById('selectionContainer').style.display = 'block';
+        }
+
+        function showAccepted() {
+            alert('Showing accepted requests details...');
+        }
+
+        function logout() {
+            alert('Logging out...');
+        }
+
+        function submitSelection() {
+            alert('Selection submitted.');
+        }
+
+        function finalizeSelection() {
+            alert('Selection finalized.');
+        }
+
+        // By default, show the selection container
+        document.addEventListener("DOMContentLoaded", function () {
+            showDetails();
+        });
+    </script>
+</body>
+
+</html>

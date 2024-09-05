@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examiner-registration</title>
+    <link href="index2.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="section examinar-name">
+            Examinar Name
+        </div>
+        <div class="section pending-requests">
+            <button onclick="showDetails()">Pending Requests</button>
+        </div>
+        <div class="section accepted-requests">
+            <button onclick="showAccepted()">Accepted Requests</button>
+        </div>
+        <div class="section logout">
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    
+    <div class="details-container" id="details-container">
+        <h3>You have received a request to set a paper.</h3>
+        <h4>Click here to get more details</h4>
+        <p><strong>Subject Code:</strong> CD-211</p>
+        <p><strong>Course:</strong> B.E.</p>
+        <p><strong>Semester:</strong> VII</p>
+        <p><strong>Branch:</strong> IT</p>
+        <p><strong>Subject:</strong> Compiler Designing</p>
+        <p><strong>Syllabus:</strong> Syllabus</p>
+        <p><strong>Question Pattern:</strong> Question Pattern</p>
+        <p><strong>Total Marks:</strong> 50</p>
+        <p><strong>Deadline:</strong> Nov 12, 2024</p>
+    
+        <div class="buttons">
+            <button class="accept-button">Accept</button>
+            <button class="reject-button">Reject</button>
+        </div>
+    </div>
+    
+    <div class="accepted-container" id="accepted-container">
+        <h3>Accepted Requests Details</h3>
+        <p><strong>Details for accepted requests will be shown here.</strong></p>
+    </div>
+    
+    <script>
+        function showDetails() {
+            document.getElementById('details-container').style.display = 'block';
+            document.getElementById('accepted-container').style.display = 'none';
+        }
+    
+        function showAccepted() {
+            document.getElementById('details-container').style.display = 'none';
+            document.getElementById('accepted-container').style.display = 'block';
+        }
+    
+        function logout() {
+            document.getElementById('details-container').style.display = 'none';
+            document.getElementById('accepted-container').style.display = 'none';
+            // No action on logout, just hiding containers
+        }
+    </script> 
+</body>
+</html>

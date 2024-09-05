@@ -1,0 +1,155 @@
+
+    
+    
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+                /* Light grey background for the whole page */
+            }
+    
+            .container {
+                margin: 20px 20px 0px 20px;
+                display: flex;
+                align-items: center;
+                height: 50px;
+                /* Decreased height for the container */
+                padding: 0 20px;
+                border-top: 5px solid rgb(45, 110, 240);
+                border-left: 10px solid rgb(45, 110, 240);
+                border-right: 10px solid rgb(45, 110, 240);
+                border-bottom: 1px solid rgb(45, 110, 240);
+                /* Blue-grey border */
+                background-color: #ffffff;
+                /* White background for the container */
+            }
+    
+            .section {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                padding: 0 10px;
+            }
+    
+            .section button {
+                background: none;
+                border: none;
+                font-size: 21px;
+                color: #607d8b;
+                cursor: pointer;
+                outline: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+                transition: background-color 0.3s, color 0.3s;
+            }
+    
+            .examinar-name {
+                flex: 1;
+                font-size: 21px;
+                color: #607d8b;
+                /* Blue-grey color for formal look */
+                border-right: 1px solid #b0bec5;
+                /* Blue-grey border */
+            }
+    
+            .pending-requests {
+                flex: 2;
+                font-size: 21px;
+                color: #607d8b;
+                /* Blue-grey color for formal look */
+                border-right: 1px solid #b0bec5;
+                /* Blue-grey border */
+            }
+    
+            .accepted-requests {
+                flex: 2;
+                font-size: 21px;
+                color: #607d8b;
+                /* Blue-grey color for formal look */
+                border-right: 1px solid #b0bec5;
+                /* Blue-grey border */
+            }
+    
+            .logout {
+                flex: 1;
+                font-size: 21px;
+                color: #607d8b;
+                /* Blue-grey color for formal look */
+                text-align: right;
+            }
+    
+            .logout::before {
+                content: '🔓';
+                /* Logout symbol */
+                margin-right: 8px;
+            }
+    
+            .details-container,
+            .accepted-container {
+                display: none;
+                margin: 20px;
+                padding: 20px;
+                background-color: #dbd9d9;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /* Shadow for the details container */
+            }
+    
+            .details-container h3,
+            .accepted-container h3 {
+                margin-top: 0;
+                font-size: 20px;
+                color: #333;
+            }
+    
+            .details-container p,
+            .accepted-container p {
+                font-size: 16px;
+                color: #333;
+                margin: 5px 0;
+            }
+    
+            .details-container .buttons,
+            .accepted-container .buttons {
+                margin-top: 20px;
+            }
+    
+            .details-container button,
+            .accepted-container button {
+                font-size: 16px;
+                color: #ffffff;
+                border: none;
+                border-radius: 4px;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+    
+            .details-container .accept-button,
+            .accepted-container .accept-button {
+                background-color: #2196F3;
+                /* Blue color for accept button */
+            }
+    
+            .details-container .reject-button,
+            .accepted-container .reject-button {
+                background-color: #f44336;
+                /* Red color for reject button */
+            }
+    
+            .accepted-container .accept-button {
+                background-color: #4CAF50;
+                /* Green color for accept button in accepted container */
+            }
+    
+            /* Hover effects */
+            .section button:hover {
+                background-color: #e0d9d9;
+                /* Light grey background on hover */
+                color: #333;
+                /* Darker text color on hover */
+            }
+       
+    
+    
